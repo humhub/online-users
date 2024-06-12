@@ -1,0 +1,16 @@
+{
+    "id": "online-users",
+    "name": "Online users",
+    "description": "Display online users",
+    "keywords": ["online users"],
+    "version": "1.0.0",
+    "humhub": {
+        "minVersion": "1.16"
+    },
+    "homepage": "https://github.com/humhub/virus-scanner",
+    "authors": [
+        {
+            "name": "Lucas Bartholemy"
+        }
+    ]
+}

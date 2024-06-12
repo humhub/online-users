@@ -8,7 +8,7 @@
 namespace humhub\modules\onlineUsers\services;
 
 use humhub\modules\user\components\ActiveQueryUser;
-use humhub\modules\user\models\User;
+use humhub\modules\user\components\Session;
 
 class UserService
 {
@@ -19,7 +19,7 @@ class UserService
 
     public function query(): ActiveQueryUser
     {
-        return User::find()->visible();
+        return Session::getOnlineUsers()->visible();
     }
 
     public function count(): int

@@ -34,18 +34,14 @@ class SidebarWidget extends Widget
      */
     public function run()
     {
-        $total = UserService::instance()->count();
-        if ($total === 0) {
+        $userService = new UserService();
+        if ($userService->getCount() === 0) {
             return '';
         }
 
-        $users = UserService::instance()->query()
-            ->limit(Config::instance()->limit)
-            ->all();
-
         return $this->render('sidebar', [
-            'total' => $total,
-            'users' => $users,
+            'total' => $userService->getCount(),
+            'users' => $userService->getUsers(Config::instance()->limit),
             'extraMenus' => $this->getExtraMenus(),
         ]);
     }

@@ -30,7 +30,7 @@ class Config extends Model
         $module = Yii::$app->getModule('online-users');
         $this->settings = $module->settings;
 
-        $this->sidebarOrder = (int) $this->settings->get('sidebarOrder', 0);
+        $this->sidebarOrder = (int) $this->settings->get('sidebarOrder', 300);
         $this->limit = (int) $this->settings->get('limit', 20);
     }
 

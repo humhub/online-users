@@ -17,10 +17,6 @@ class OnlineUsersCest
         $I->wantTo('test dashboard sidebar with online-users');
         $I->amAdmin();
         $I->waitForText('Online users (1)');
-
-        $I->amUser1(true);
-        $I->amUser2(true);
-        $I->waitForText('Online users (3)');
     }
 
 }

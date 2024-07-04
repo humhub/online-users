@@ -11,6 +11,8 @@ use humhub\modules\user\components\ActiveQueryUser;
 use humhub\modules\user\components\Session;
 use humhub\modules\user\models\User;
 use humhub\modules\user\services\IsOnlineService;
+use Yii;
+use yii\caching\DummyCache;
 
 class UserService
 {
@@ -57,7 +59,8 @@ class UserService
             $this->users = $this->query()->all();
 
             // Filter users with online service (from cache/green dot)
-            if (count($this->users) < $this->maxUsersCheckFromCache) {
+            if (!(Yii::$app->cache instanceof DummyCache) && // Don't check when cache is disabled
+                count($this->users) < $this->maxUsersCheckFromCache) {
                 $this->users = array_filter($this->users, function (User $user) {
                     return (new IsOnlineService($user))->getStatus();
                 });

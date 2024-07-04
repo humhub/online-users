@@ -1,2 +1,2 @@
 # Online users
-Display online users
+See who is currently active with the Online Users Module, enhancing interaction within your community. The module displays online users directly on your dashboard in a snippet, making it easy to find who’s available for chat or collaboration.

@@ -5,6 +5,7 @@
  * @license https://www.humhub.com/licences
  */
 
+use humhub\modules\ui\form\widgets\SortOrderField;
 use humhub\modules\onlineUsers\models\Config;
 use humhub\widgets\Button;
 use yii\bootstrap\ActiveForm;
@@ -23,7 +24,7 @@ use yii\bootstrap\ActiveForm;
         <?php $form = ActiveForm::begin() ?>
 
         <?= $form->field($config, 'limit')->textInput(['type' => 'number']) ?>
-        <?= $form->field($config, 'sidebarOrder')->textInput(['type' => 'number']) ?>
+        <?= $form->field($config, 'sidebarOrder')->widget(SortOrderField::class) ?>
 
         <?= Button::save()->submit() ?>
 

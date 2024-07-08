@@ -1,6 +1,6 @@
 {
     "id": "online-users",
-    "name": "Online users",
+    "name": "Online Users",
     "description": "The module displays online users directly on your dashboard in a snippet.",
     "keywords": ["online", "users", "snippet"],
     "version": "1.0.1",

@@ -11,7 +11,6 @@ use onlineUsers\AcceptanceTester;
 
 class OnlineUsersCest
 {
-
     public function testDashboardSidebar(AcceptanceTester $I)
     {
         $I->wantTo('test dashboard sidebar with online-users');

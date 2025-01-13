@@ -1,9 +1,9 @@
 <?php
-return array (
-  '<strong>Online</strong> users' => '',
-  'Dashboard sidebar order' => '',
-  'General settings for the Online Users module.' => '',
-  'Limit users on the dashboard widget' => '',
-  'Number of users' => '',
-  'Settings' => 'inställningar',
-);
+return [
+  '<strong>Online</strong> users' => 'Användare <strong>Online</strong>',
+  'Dashboard sidebar order' => 'Ordningen på Tidslinjens navigeringsfält',
+  'General settings for the Online Users module.' => 'Allmänna inställningar för modulen Onlineanvändare.',
+  'Limit users on the dashboard widget' => 'Begränsa användare för widgeten på Tidslinjen',
+  'Number of users' => 'Antal användare',
+  'Settings' => 'Inställningar',
+];

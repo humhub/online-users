@@ -9,12 +9,12 @@
 namespace humhub\modules\onlineUsers\widgets;
 
 use humhub\components\Widget;
-use humhub\libs\Html;
+use humhub\helpers\Html;
 use humhub\modules\admin\permissions\ManageModules;
 use humhub\modules\onlineUsers\models\Config;
 use humhub\modules\onlineUsers\Module;
 use humhub\modules\onlineUsers\services\UserService;
-use humhub\widgets\Link;
+use humhub\widgets\bootstrap\Link;
 use Yii;
 
 /**

@@ -5,10 +5,10 @@
  * @license https://www.humhub.com/licences
  */
 
-use humhub\modules\ui\form\widgets\SortOrderField;
 use humhub\modules\onlineUsers\models\Config;
-use humhub\widgets\Button;
-use yii\bootstrap\ActiveForm;
+use humhub\widgets\bootstrap\Button;
+use humhub\widgets\form\ActiveForm;
+use humhub\widgets\form\SortOrderField;
 
 /* @var Config $config */
 ?>
@@ -17,7 +17,7 @@ use yii\bootstrap\ActiveForm;
 
     <div class="panel-body">
         <h4><?= Yii::t('OnlineUsersModule.base', 'Settings') ?></h4>
-        <div class="help-block">
+        <div class="text-body-secondary">
             <?= Yii::t('OnlineUsersModule.base', 'General settings for the Online Users module.') ?>
         </div>
 

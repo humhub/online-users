@@ -3,9 +3,9 @@
     "name": "Online Users",
     "description": "The module displays online users directly on your dashboard in a snippet.",
     "keywords": ["online", "users", "snippet"],
-    "version": "1.0.1",
+    "version": "1.1.0",
     "humhub": {
-        "minVersion": "1.16"
+        "minVersion": "1.18"
     },
     "homepage": "https://github.com/humhub/online-users",
     "authors": [

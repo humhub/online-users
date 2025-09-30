@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.1.1 (Unreleased)
+---------------------
+- Enh #14: Improved Module Test GitHub Actions
+
 1.1.0 (July 26, 2025)
 ---------------------
 - Enh: Use SortOrderField instead of textInput

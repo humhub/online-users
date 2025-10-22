@@ -4,6 +4,7 @@ Changelog
 1.1.1 (Unreleased)
 ---------------------
 - Enh #14: Improved Module Test GitHub Actions
+- Enh #15: Implemented `module-coding-standards`
 
 1.1.0 (July 26, 2025)
 ---------------------

@@ -22,13 +22,15 @@ use humhub\widgets\PanelMenu;
         (<?= $total ?>)
     </div>
     <div class="panel-body">
-        <?php foreach ($users as $user) : ?>
-            <?= Image::widget([
-                'user' => $user,
-                'width' => 32,
-                'showTooltip' => true,
-                'showSelfOnlineStatus' => true,
-            ]) ?>
-        <?php endforeach; ?>
+        <div class="d-flex gap-2 flex-wrap">
+            <?php foreach ($users as $user) : ?>
+                <?= Image::widget([
+                    'user' => $user,
+                    'width' => 32,
+                    'showTooltip' => true,
+                    'showSelfOnlineStatus' => true,
+                ]) ?>
+            <?php endforeach; ?>
+        </div>
     </div>
 </div>

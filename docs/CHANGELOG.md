@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.1.1 (Unreleased)
+---------------------
+- Fix: Vertical spacing between Profile images in the widget
+
 1.1.0 (July 26, 2025)
 ---------------------
 - Enh: Use SortOrderField instead of textInput

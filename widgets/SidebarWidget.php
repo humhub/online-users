@@ -55,10 +55,9 @@ class SidebarWidget extends Widget
 
         return Html::tag(
             'li',
-            Link::to(Yii::t('OnlineUsersModule.base', 'Settings'))
-                ->link(Module::getInstance()->getConfigUrl())
+            Link::to(Yii::t('OnlineUsersModule.base', 'Settings'), Module::getInstance()->getConfigUrl())
                 ->icon('cog')
-                ->cssClass(['btn', 'dropdown-item']),
+                ->cssClass(['dropdown-item']),
         );
     }
 }

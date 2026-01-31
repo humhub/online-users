@@ -6,6 +6,7 @@ Changelog
 - Enh #14: Improved Module Test GitHub Actions
 - Enh #15: Implemented `module-coding-standards`
 - Fix #18: Dashboard widget menu dropdown
+- Fix #20: Vertical spacing between Profile images in the widget
 
 1.1.0 (July 26, 2025)
 ---------------------

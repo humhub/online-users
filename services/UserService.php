@@ -43,9 +43,7 @@ class UserService
 
     public function getCount(): int
     {
-        if ($this->count === null) {
-            $this->count = count($this->getUsers());
-        }
+        $this->count ??= count($this->getUsers());
 
         return $this->count;
     }

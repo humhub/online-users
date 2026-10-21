@@ -4,6 +4,7 @@ Changelog
 1.1.2 (Unreleased)
 ------------------
 - Enh: Automated code refactoring for HumHub 1.18 using Rector
+- Fix #23: Online users widget listed users who are not online and users who hide their online status; Slow query loading all online users on every dashboard load; Server error on invalid number in the settings; Negative values accepted in the settings
 
 1.1.1 (July 31, 2026)
 ---------------------

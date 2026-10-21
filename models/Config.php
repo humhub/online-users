@@ -19,8 +19,10 @@ use yii\base\Model;
 class Config extends Model
 {
     protected ?SettingsManager $settings = null;
-    public ?int $sidebarOrder = null;
-    public ?int $limit = null;
+    /** @var int|string|null */
+    public $sidebarOrder;
+    /** @var int|string|null */
+    public $limit;
 
     /**
      * @inheritdoc
@@ -41,7 +43,7 @@ class Config extends Model
     public function rules()
     {
         return [
-            [['sidebarOrder', 'limit'], 'integer'],
+            [['sidebarOrder', 'limit'], 'integer', 'min' => 0],
         ];
     }
 

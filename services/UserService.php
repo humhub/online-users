@@ -71,11 +71,9 @@ class UserService
      */
     public function getUserIds(): array
     {
-        if ($this->userIds === null) {
-            $this->userIds = $this->isOnlineStatusHidden() ? [] : $this->filterByOnlineStatus(
-                array_map('intval', $this->query()->select('user.id')->distinct()->orderBy('user.id')->column()),
-            );
-        }
+        $this->userIds ??= $this->isOnlineStatusHidden() ? [] : $this->filterByOnlineStatus(
+            array_map('intval', $this->query()->select('user.id')->distinct()->orderBy('user.id')->column()),
+        );
 
         return $this->userIds;
     }

@@ -23,6 +23,8 @@ class Config extends Model
     public $sidebarOrder;
     /** @var int|string|null */
     public $limit;
+    /** @var bool|int|string|null */
+    public $showForGuests;
 
     /**
      * @inheritdoc
@@ -35,6 +37,7 @@ class Config extends Model
 
         $this->sidebarOrder = (int) $this->settings->get('sidebarOrder', 300);
         $this->limit = (int) $this->settings->get('limit', 20);
+        $this->showForGuests = (bool) $this->settings->get('showForGuests', false);
     }
 
     /**
@@ -44,6 +47,7 @@ class Config extends Model
     {
         return [
             [['sidebarOrder', 'limit'], 'integer', 'min' => 0],
+            [['showForGuests'], 'boolean'],
         ];
     }
 
@@ -55,6 +59,7 @@ class Config extends Model
         return [
             'sidebarOrder' => Yii::t('OnlineUsersModule.base', 'Dashboard sidebar order'),
             'limit' => Yii::t('OnlineUsersModule.base', 'Number of users'),
+            'showForGuests' => Yii::t('OnlineUsersModule.base', 'Show widget in guest mode'),
         ];
     }
 
@@ -76,12 +81,17 @@ class Config extends Model
 
         $this->settings->set('sidebarOrder', $this->sidebarOrder);
         $this->settings->set('limit', $this->limit);
+        $this->settings->set('showForGuests', (bool) $this->showForGuests);
 
         return true;
     }
 
     public function isVisibleSidebar(): bool
     {
-        return $this->limit > 0;
+        if ($this->limit <= 0) {
+            return false;
+        }
+
+        return $this->showForGuests || !Yii::$app->user->isGuest;
     }
 }

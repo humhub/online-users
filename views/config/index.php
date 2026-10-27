@@ -25,6 +25,7 @@ use humhub\widgets\form\SortOrderField;
 
         <?= $form->field($config, 'limit')->textInput(['type' => 'number']) ?>
         <?= $form->field($config, 'sidebarOrder')->widget(SortOrderField::class) ?>
+        <?= $form->field($config, 'showForGuests')->checkbox() ?>
 
         <?= Button::save()->submit() ?>
 

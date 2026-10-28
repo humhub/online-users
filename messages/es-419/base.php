@@ -7,4 +7,5 @@ return [
     'Limit users on the dashboard widget' => '',
     'Number of users' => '',
     'Settings' => '',
+    'Show widget in guest mode' => '',
 ];

@@ -1,9 +1,11 @@
 <?php
-return array (
-  '<strong>Online</strong> users' => '',
-  'Dashboard sidebar order' => '',
-  'General settings for the Online Users module.' => '',
-  'Limit users on the dashboard widget' => '',
-  'Number of users' => '',
-  'Settings' => 'การตั้งค่า',
-);
+
+return [
+    'Settings' => 'การตั้งค่า',
+    '<strong>Online</strong> users' => '',
+    'Dashboard sidebar order' => '',
+    'General settings for the Online Users module.' => '',
+    'Limit users on the dashboard widget' => '',
+    'Number of users' => '',
+    'Show widget in guest mode' => '',
+];

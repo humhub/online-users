@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.1.3 (Unreleased)
+------------------
+- Enh: Automated code refactoring for HumHub 1.18 using Rector
+
 1.1.2 (October 27, 2026)
 ------------------------
 - Enh: Automated code refactoring for HumHub 1.18 using Rector

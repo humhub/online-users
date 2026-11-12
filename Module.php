@@ -8,7 +8,7 @@
 
 namespace humhub\modules\onlineUsers;
 
-use humhub\modules\ui\icon\widgets\Icon;
+use humhub\widgets\Icon;
 use yii\helpers\Url;
 
 class Module extends \humhub\components\Module

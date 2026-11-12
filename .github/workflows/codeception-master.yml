@@ -10,4 +10,4 @@ jobs:
   tests:
     uses: humhub/module-coding-standards/.github/workflows/codeception-master.yml@main
     with:
-      module-id: onlline-users
+      module-id: online-users

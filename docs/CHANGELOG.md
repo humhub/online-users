@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.2.0 (Unreleased)
+------------------
+- Enh: Compatibility with HumHub 1.20
+- Fix: Wrong module ID in the GitHub test workflows
+
 1.1.3 (Unreleased)
 ------------------
 - Enh: Automated code refactoring for HumHub 1.18 using Rector

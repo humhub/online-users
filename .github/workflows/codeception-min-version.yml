@@ -11,4 +11,4 @@ jobs:
   tests:
     uses: humhub/module-coding-standards/.github/workflows/codeception-min-version.yml@main
     with:
-      module-id: onlline-users
+      module-id: online-users

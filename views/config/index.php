@@ -12,11 +12,11 @@ use humhub\widgets\form\SortOrderField;
 
 /* @var Config $config */
 ?>
-<div class="panel panel-default">
-    <div class="panel-heading"><?= Yii::t('OnlineUsersModule.base', '<strong>Online</strong> users') ?></div>
+<div class="card content-card">
+    <div class="card-header"><div class="card-title"><?= Yii::t('OnlineUsersModule.base', '<strong>Online</strong> users') ?></div></div>
 
-    <div class="panel-body">
-        <h4><?= Yii::t('OnlineUsersModule.base', 'Settings') ?></h4>
+    <div class="card-body">
+        <h4 class="card-title"><?= Yii::t('OnlineUsersModule.base', 'Settings') ?></h4>
         <div class="text-body-secondary">
             <?= Yii::t('OnlineUsersModule.base', 'General settings for the Online Users module.') ?>
         </div>

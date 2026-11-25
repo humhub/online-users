@@ -5,6 +5,7 @@ Changelog
 ------------------
 - Enh: Compatibility with HumHub 1.20
 - Fix: Wrong module ID in the GitHub test workflows
+- Enh: Cards instead of Bootstrap 3 panels, the sidebar widget as `SidebarCard` and the text styles of the core 1.20 (humhub/humhub#8777)
 
 1.1.3 (Unreleased)
 ------------------

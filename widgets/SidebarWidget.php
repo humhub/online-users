@@ -9,12 +9,11 @@
 namespace humhub\modules\onlineUsers\widgets;
 
 use humhub\components\Widget;
-use humhub\helpers\Html;
 use humhub\modules\admin\permissions\ManageModules;
 use humhub\modules\onlineUsers\models\Config;
 use humhub\modules\onlineUsers\Module;
 use humhub\modules\onlineUsers\services\UserService;
-use humhub\widgets\bootstrap\Link;
+use humhub\widgets\menu\MenuLink;
 use Yii;
 
 /**
@@ -43,21 +42,23 @@ class SidebarWidget extends Widget
         return $this->render('sidebar', [
             'total' => $userService->getCount(),
             'users' => $userService->getUsers(Config::instance()->limit),
-            'extraMenus' => $this->getExtraMenus(),
+            'menu' => $this->getMenu(),
         ]);
     }
 
-    private function getExtraMenus(): string
+    /**
+     * @return MenuLink[] the entries of the card's ⋮ menu
+     */
+    private function getMenu(): array
     {
         if (!Yii::$app->user->can(ManageModules::class)) {
-            return '';
+            return [];
         }
 
-        return Html::tag(
-            'li',
-            Link::to(Yii::t('OnlineUsersModule.base', 'Settings'), Module::getInstance()->getConfigUrl())
-                ->icon('settings')
-                ->cssClass(['dropdown-item']),
-        );
+        return [new MenuLink([
+            'label' => Yii::t('OnlineUsersModule.base', 'Settings'),
+            'url' => Module::getInstance()->getConfigUrl(),
+            'icon' => 'settings',
+        ])];
     }
 }

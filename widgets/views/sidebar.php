@@ -8,20 +8,19 @@
 use humhub\modules\onlineUsers\Module;
 use humhub\modules\user\models\User;
 use humhub\modules\user\widgets\Image;
-use humhub\widgets\PanelMenu;
+use humhub\widgets\menu\MenuLink;
+use humhub\widgets\SidebarCard;
 
 /* @var User[] $users */
 /* @var int $total */
-/* @var string $extraMenus */
+/* @var MenuLink[] $menu */
 ?>
-<div class="panel panel-default">
-    <?= PanelMenu::widget(['id' => 'panel-online-users', 'extraMenus' => $extraMenus]) ?>
-    <div class="panel-heading">
-        <?= Module::getInstance()->getIcon() ?>
-        <?= Yii::t('OnlineUsersModule.base', '<strong>Online</strong> users') ?>
-        (<?= $total ?>)
-    </div>
-    <div class="panel-body">
+<?php SidebarCard::begin([
+    'title' => Module::getInstance()->getIcon() . ' '
+        . Yii::t('OnlineUsersModule.base', '<strong>Online</strong> users') . ' (' . $total . ')',
+    'encodeTitle' => false,
+    'menu' => $menu,
+]) ?>
         <div class="d-flex gap-2 flex-wrap">
             <?php foreach ($users as $user) : ?>
                 <?= Image::widget([
@@ -32,5 +31,4 @@ use humhub\widgets\PanelMenu;
                 ]) ?>
             <?php endforeach; ?>
         </div>
-    </div>
-</div>
+<?php SidebarCard::end() ?>
